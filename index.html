@@ -62,7 +62,7 @@
                   />
                 </svg>
               </div>
-              Dashboard
+              <span class="link__title">Dashboard</span>
             </a>
           </li>
           <li class="list">
@@ -107,7 +107,7 @@
                   />
                 </svg>
               </div>
-              Community Records
+              <span class="link__title">Community Records</span>
             </a>
           </li>
           <li class="list">
@@ -140,7 +140,7 @@
                   />
                 </svg>
               </div>
-              Lending & Asset Records
+              <span class="link__title"> Lending & Asset Records</span>
             </a>
           </li>
           <li class="list">
@@ -189,7 +189,7 @@
                   />
                 </svg>
               </div>
-              Events</a
+              <span class="link__title"> Events</span></a
             >
           </li>
 
@@ -232,7 +232,7 @@
                   />
                 </svg>
               </div>
-              List of Services</a
+              <span class="link__title"> List of Services</span></a
             >
           </li>
           <li class="list">
@@ -277,7 +277,7 @@
                   />
                 </svg>
               </div>
-              Officials</a
+              <span class="link__title"> Officials</span></a
             >
           </li>
           <li class="list">
@@ -307,7 +307,7 @@
                   <path d="M256 367.91a20 20 0 1120-20 20 20 0 01-20 20z" />
                 </svg>
               </div>
-              Incident Reports</a
+              <span class="link__title"> Incident Reports</span></a
             >
           </li>
           <li class="list">
@@ -344,7 +344,7 @@
                   />
                 </svg>
               </div>
-              Manage Users</a
+              <span class="link__title"> Manage Users</span></a
             >
           </li>
           <li class="list">
@@ -366,7 +366,7 @@
                   />
                 </svg>
               </div>
-              Account Settings</a
+              <span class="link__title"> Account Settings</span></a
             >
           </li>
         </ul>
@@ -888,6 +888,13 @@
         const chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
       });
+    </script>
+    <script>
+      document
+        .querySelector(".menu__icon")
+        .addEventListener("click", function () {
+          document.querySelector("body").classList.toggle("hide__sidebar");
+        });
     </script>
   </body>
 </html>

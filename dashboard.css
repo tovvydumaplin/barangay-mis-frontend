@@ -137,3 +137,25 @@
 .user__details {
   font-size: 1.4rem;
 }
+
+/* Sidebar functionality */
+
+.sidebar {
+  transition: all 0.2s ease-in-out;
+}
+body.hide__sidebar {
+  display: grid;
+  grid-template-columns: 0.1fr 1.9fr;
+}
+
+.hide__sidebar .sidebar {
+  padding: 2rem 0;
+  min-width: 0;
+}
+.hide__sidebar .link__title {
+  display: none;
+}
+.hide__sidebar .link:link,
+.hide__sidebar .link:visited {
+  justify-content: center;
+}
