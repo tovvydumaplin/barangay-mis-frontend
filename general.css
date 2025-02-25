@@ -50,6 +50,8 @@
   --sidebar-color: #e4fff5;
   --link-bg-color: #cdece5;
   --gray-color: #d9d9d9;
+  --strong-green-color: #0d9275;
+  --white-color: #fff;
 }
 
 * {
@@ -60,7 +62,7 @@
   scroll-behavior: smooth;
 }
 html {
-  font-size: 55%;
+  font-size: 62.5%;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -68,14 +70,43 @@ body {
   font-weight: 400;
   font-size: 1.8rem;
   color: var(--text-color);
-  display: grid;
+  display: flex;
   grid-template-columns: 0.4fr 1.6fr;
 }
 main {
   width: 100%;
-  padding: 4.4rem;
+  padding: 3rem;
 }
-
+.footer {
+  padding: 8rem 0 0 0;
+  text-align: center;
+}
 .heading__primary {
   font-size: 4rem;
+}
+
+/* Customize scrollbar */
+.events::-webkit-scrollbar {
+  width: 5px; /* Thin scrollbar */
+}
+
+.events::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.events::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker on hover */
+}
+.birthday__container__card::-webkit-scrollbar {
+  width: 5px; /* Thin scrollbar */
+}
+
+.birthday__container__card::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.birthday__container__card::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker on hover */
 }

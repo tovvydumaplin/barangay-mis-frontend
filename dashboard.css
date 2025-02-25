@@ -11,7 +11,7 @@
   padding: 3rem;
   border-radius: 1rem;
   position: relative;
-  max-height: 40rem;
+  max-height: 43rem;
 }
 
 .count {
@@ -44,6 +44,7 @@
 }
 .card .subheading {
   margin-bottom: 3rem;
+  font-weight: 600;
 }
 .heading__box {
   margin-bottom: 4rem;
@@ -59,7 +60,7 @@
 
 .container__bottom {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2.1fr 1fr 1fr;
   gap: 3rem;
 }
 
@@ -74,6 +75,7 @@
   justify-content: space-between;
   gap: 1rem;
   margin-right: 2rem;
+  align-items: center;
 }
 .event__title {
   font-size: 1.4rem;
@@ -109,23 +111,33 @@
   max-height: 30rem;
   overflow-y: scroll;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .birthday__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-right: 2rem;
+  justify-content: space-between;
+}
+.img__box__birthday {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .birthday__box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #efefef;
+  background-color: var(--strong-green-color);
   padding: 0.6rem;
   border-radius: 0.6rem;
   text-align: center;
+  color: var(--white-color);
+  font-weight: 600;
 }
 .birthday__day {
   font-weight: 600;
@@ -136,6 +148,9 @@
 
 .user__details {
   font-size: 1.4rem;
+}
+.user__name {
+  font-weight: 600;
 }
 
 /* Sidebar functionality */
@@ -162,4 +177,8 @@ body.hide__sidebar {
 
 .hide__sidebar .logo__img {
   width: 5rem;
+}
+
+.month {
+  color: #626262;
 }
