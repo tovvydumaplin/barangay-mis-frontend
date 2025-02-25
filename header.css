@@ -18,6 +18,10 @@
   width: 4rem;
   height: 4rem;
   color: var(--main-color);
+  transition: all 0.3s ease;
+}
+.menu__icon:hover {
+  cursor: pointer;
 }
 
 .user__box {
