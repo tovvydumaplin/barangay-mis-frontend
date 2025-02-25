@@ -1,0 +1,81 @@
+/* Type face */
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+/* Icons */
+@import "ionicons/css/ionicons.min.css";
+
+:root {
+  --main-color: #0d9275;
+  --text-color: #343539;
+  --sidebar-color: #e4fff5;
+  --link-bg-color: #cdece5;
+  --gray-color: #d9d9d9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 55%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 27px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+}
+main {
+  width: 100%;
+  padding: 4.4rem;
+}
+
+.heading__primary {
+  font-size: 4rem;
+}
