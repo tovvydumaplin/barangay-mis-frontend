@@ -77,6 +77,11 @@ main {
   width: 100%;
   padding: 3rem;
 }
+hr {
+  background-color: #e7e7e7;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .footer {
   padding: 8rem 0 0 0;
   text-align: center;
@@ -109,4 +114,8 @@ main {
 
 .birthday__container__card::-webkit-scrollbar-thumb:hover {
   background: #555; /* Darker on hover */
+}
+
+.d__none {
+  display: none;
 }
