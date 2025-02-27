@@ -40,7 +40,7 @@
         <ul class="nav__list">
           <p class="nav__heading">Menu</p>
           <li class="list">
-            <a href="#" class="link">
+            <a href="index.html" class="link">
               <!-- Home Outline Icon -->
               <div class="icon__link">
                 <svg
@@ -378,6 +378,72 @@
       </nav>
     </aside>
     <main>
+      <div class="modal">
+        <div class="modal__header">
+          <p class="modal__heading">Resident Profile Info</p>
+          <button class="btn__secondary active">Edit Info</button>
+        </div>
+        <form class="modal__body">
+          <div class="row">
+            <!-- 1 -->
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter fullname"
+                name="firstname"
+                readonly
+              />
+              <span class="input__title"
+                >Firstname<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <!-- 1 -->
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter fullname"
+                name="firstname"
+                readonly
+              />
+              <span class="input__title"
+                >Firstname<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <!-- 1 -->
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter fullname"
+                name="firstname"
+                readonly
+              />
+              <span class="input__title"
+                >Firstname<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <!-- 1 -->
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter fullname"
+                name="firstname"
+                readonly
+              />
+              <span class="input__title"
+                >Firstname<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+          </div>
+        </form>
+      </div>
       <header class="header">
         <div class="section__title__container">
           <div class="menu__icon">
@@ -453,12 +519,12 @@
       <div class="container">
         <div class="heading__box">
           <div class="tab__container">
-            <div class="btn__container visible">
-              <button class="tab__btn tab__1">Resident Records</button>
+            <div class="btn__container tab__1 visible">
+              <button class="tab__btn">Resident Records</button>
               <div class="active__tab"></div>
             </div>
-            <div class="btn__container">
-              <button class="tab__btn tab__2">Household Records</button>
+            <div class="btn__container tab__2">
+              <button class="tab__btn">Household Records</button>
               <div class="active__tab"></div>
             </div>
           </div>
@@ -543,7 +609,7 @@
                 </div>
                 Print
               </button>
-              <button class="btn__secondary">
+              <button class="btn__secondary active">
                 <div class="icon__link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -773,6 +839,14 @@
         .addEventListener("click", function () {
           document.querySelector(".dropdown__menu").classList.toggle("show");
         });
+      document.querySelector(".tab__1").addEventListener("click", function () {
+        document.querySelector(".tab__1").classList.add("visible");
+        document.querySelector(".tab__2").classList.remove("visible");
+      });
+      document.querySelector(".tab__2").addEventListener("click", function () {
+        document.querySelector(".tab__2").classList.add("visible");
+        document.querySelector(".tab__1").classList.remove("visible");
+      });
       $(document).ready(function () {
         $("#example").DataTable();
       });

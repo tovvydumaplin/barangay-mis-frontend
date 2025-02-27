@@ -130,3 +130,28 @@ hr {
   padding: 1rem;
   border-radius: 0.6rem;
 }
+
+/* Input Elements */
+.input__box {
+  position: relative;
+}
+.input__title {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 1.6rem;
+  color: #545454;
+}
+
+.information__input {
+  padding: 4.3rem 0 2rem 2rem;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  display: inline-block;
+  width: 100%;
+}
+.red__dot {
+  color: #ef4949;
+}
+/* Input Elements End */
