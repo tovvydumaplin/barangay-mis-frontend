@@ -378,6 +378,7 @@
       </nav>
     </aside>
     <main>
+      <div class="wrapper"></div>
       <div class="modal">
         <div class="modal__header">
           <p class="modal__heading">Resident Profile Info</p>
@@ -404,12 +405,12 @@
               <input
                 class="information__input"
                 value=""
-                placeholder="Enter fullname"
-                name="firstname"
+                placeholder="Enter lastname"
+                name="lastname"
                 readonly
               />
               <span class="input__title"
-                >Firstname<span class="red__dot">*</span></span
+                >Lastname<span class="red__dot">*</span></span
               >
               <p class="text-danger"></p>
             </div>
@@ -418,29 +419,231 @@
               <input
                 class="information__input"
                 value=""
-                placeholder="Enter fullname"
-                name="firstname"
+                placeholder="Enter middlename"
+                name="middlename"
                 readonly
               />
               <span class="input__title"
-                >Firstname<span class="red__dot">*</span></span
+                >Middlename<span class="red__dot">*</span></span
               >
               <p class="text-danger"></p>
             </div>
-            <!-- 1 -->
             <div class="input__box">
               <input
                 class="information__input"
                 value=""
-                placeholder="Enter fullname"
-                name="firstname"
+                placeholder="Enter suffix"
+                name="suffix"
                 readonly
               />
               <span class="input__title"
-                >Firstname<span class="red__dot">*</span></span
+                >suffix<span class="red__dot">*</span></span
               >
               <p class="text-danger"></p>
             </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter contact-no"
+                name="contact-no"
+                readonly
+              />
+              <span class="input__title"
+                >Contact No.<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <div class="input__box">
+              <input
+                type="date"
+                class="information__input"
+                value=""
+                placeholder="Enter Birthdate"
+                name="birthdate"
+                readonly
+              />
+              <span class="input__title"
+                >Birthdate<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter Age"
+                name="age"
+                readonly
+              />
+              <span class="input__title"
+                >Age<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter Birthplace"
+                name="birthplace"
+                readonly
+              />
+              <span class="input__title"
+                >Birthplace<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter Citizenship"
+                name="citizenship"
+                readonly
+              />
+              <span class="input__title"
+                >Citizenship<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter Gender"
+                name="gender"
+                readonly
+              />
+              <span class="input__title"
+                >Gender<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter Civil Status"
+                name="civil-status"
+                readonly
+              />
+              <span class="input__title"
+                >Civil Status<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter Occupation"
+                name="occupation"
+                readonly
+              />
+              <span class="input__title"
+                >Occupation<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+            <div class="input__box">
+              <input
+                class="information__input"
+                value=""
+                placeholder="Enter Religion"
+                name="religion"
+                readonly
+              />
+              <span class="input__title"
+                >Religion<span class="red__dot">*</span></span
+              >
+              <p class="text-danger"></p>
+            </div>
+          </div>
+          <div class="row margin__bottom__2">
+            <div class="radio__box">
+              <p class="radio__heading">
+                Person with Disablity<span class="red__dot">*</span>
+              </p>
+
+              <div class="radio__buttons">
+                <div class="radio__btn__container">
+                  <input type="radio" class="radio__btn" value="yes" />
+                  <span class="yes">Yes</span>
+                </div>
+                <div class="radio__btn__container">
+                  <input type="radio" class="radio__btn" value="no" />
+                  <span class="no">No</span>
+                </div>
+              </div>
+            </div>
+            <div class="radio__box">
+              <p class="radio__heading">
+                Voters of Barangay<span class="red__dot">*</span>
+              </p>
+
+              <div class="radio__buttons">
+                <div class="radio__btn__container">
+                  <input type="radio" class="radio__btn" value="yes" />
+                  <span class="yes">Yes</span>
+                </div>
+                <div class="radio__btn__container">
+                  <input type="radio" class="radio__btn" value="no" />
+                  <span class="no">No</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row flex__d__col">
+            <p class="modal__subheading">Household Information</p>
+            <div class="row">
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  placeholder="Enter Household Ownership"
+                  name="household-ownership"
+                  readonly
+                />
+                <span class="input__title"
+                  >Household Ownership<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  placeholder="Enter House No."
+                  name="house-no"
+                  readonly
+                />
+                <span class="input__title"
+                  >House No.<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  placeholder="Enter Street"
+                  name="street"
+                  readonly
+                />
+                <span class="input__title"
+                  >Street<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="btn__box__modal">
+            <button class="btn__secondary active btn__close">Close</button>
           </div>
         </form>
       </div>
@@ -672,7 +875,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -684,7 +889,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -696,7 +903,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -708,7 +917,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -720,7 +931,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -732,7 +945,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -744,7 +959,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -756,7 +973,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09123456789</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>2</td>
@@ -768,7 +987,9 @@
                   <td>No</td>
                   <td>Yes</td>
                   <td>09234567890</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>3</td>
@@ -780,7 +1001,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09345678901</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>4</td>
@@ -792,7 +1015,9 @@
                   <td>Yes</td>
                   <td>No</td>
                   <td>09456789012</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
                 <tr>
                   <td>5</td>
@@ -804,7 +1029,9 @@
                   <td>Yes</td>
                   <td>Yes</td>
                   <td>09567890123</td>
-                  <td><button class="btn__primary">View</button></td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -827,6 +1054,30 @@
     ></script>
 
     <script>
+      document.querySelectorAll(".table__button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelector(".wrapper").classList.add("open");
+          document.querySelector(".modal").classList.add("open");
+        });
+      });
+
+      document.querySelector(".wrapper").addEventListener("click", function () {
+        document.querySelector(".wrapper").classList.remove("open");
+        document.querySelector(".modal").classList.remove("open");
+      });
+      document
+        .querySelector(".btn__close")
+        .addEventListener("click", function () {
+          document.querySelector(".wrapper").classList.remove("open");
+          document.querySelector(".modal").classList.remove("open");
+        });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelector(".wrapper").classList.remove("open");
+          document.querySelector(".modal").classList.remove("open");
+        }
+      });
+
       document
         .querySelector(".menu__icon")
         .addEventListener("click", function () {
