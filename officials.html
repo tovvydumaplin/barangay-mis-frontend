@@ -22,9 +22,15 @@
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="dashboard.css" />
     <link rel="stylesheet" href="reusables.css" />
     <link rel="stylesheet" href="dashboard-responsive.css" />
+    <link rel="stylesheet" href="lending-assets.css" />
+    <link rel="stylesheet" href="officials.css" />
+
+    <link rel="stylesheet" href="table.css" />
+    <link href="DataTables/datatables.min.css" rel="stylesheet" />
+
+    <script src="DataTables/datatables.min.js"></script>
     <script src="./js/apexcharts.min.js"></script>
   </head>
   <body>
@@ -35,7 +41,7 @@
       <nav class="navigation">
         <ul class="nav__list">
           <p class="nav__heading">Menu</p>
-          <li class="list active">
+          <li class="list">
             <a href="index.html" class="link">
               <!-- Home Outline Icon -->
               <div class="icon__link">
@@ -236,7 +242,7 @@
               <span class="link__title"> List of Services</span></a
             >
           </li>
-          <li class="list">
+          <li class="list active">
             <a href="officials.html" class="link">
               <!-- People Outline Icon -->
               <div class="icon__link">
@@ -374,6 +380,192 @@
       </nav>
     </aside>
     <main>
+      <div class="wrapper"></div>
+      <div id="createEventModal" class="modal">
+        <div class="modal__header">
+          <p class="modal__heading">Add Official</p>
+        </div>
+        <form class="modal__body community__modal">
+          <div class="row flex__d__col">
+            <div class="row">
+              <div class="img__box">
+                <img src="img__default.png" class="img__profile" />
+              </div>
+              <div class="input__box__container">
+                <div class="input__box margin__bottom__2">
+                  <input
+                    class="information__input"
+                    value=""
+                    placeholder="Enter Street"
+                    name="street"
+                    readonly
+                  />
+                  <span class="input__title"
+                    >Firstname<span class="red__dot">*</span></span
+                  >
+                  <p class="text-danger"></p>
+                </div>
+                <div class="input__box">
+                  <input
+                    class="information__input"
+                    value=""
+                    placeholder="Enter Street"
+                    name="street"
+                    readonly
+                  />
+                  <span class="input__title"
+                    >Lastname<span class="red__dot">*</span></span
+                  >
+                  <p class="text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  placeholder="Enter middlename"
+                  readonly
+                />
+                <span class="input__title"
+                  >Middlename<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  placeholder="Enter middlename"
+                  readonly
+                />
+                <span class="input__title"
+                  >Suffix<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  name="street"
+                  readonly
+                />
+                <span class="input__title"
+                  >Position<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  name="street"
+                  readonly
+                  type="date"
+                />
+                <span class="input__title"
+                  >Position<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  name="street"
+                  readonly
+                  type="date"
+                />
+                <span class="input__title"
+                  >Position<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="btn__box__modal">
+            <span class="btn__primary active">Create Event</span>
+          </div>
+        </form>
+      </div>
+      <div id="viewEventModal" class="modal">
+        <div class="modal__header">
+          <p class="modal__heading">View Event</p>
+        </div>
+        <form class="modal__body community__modal">
+          <div class="row flex__d__col">
+            <div class="row">
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  placeholder="Enter Street"
+                  name="street"
+                  readonly
+                />
+                <span class="input__title"
+                  >Street<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input__box">
+                <textarea
+                  class="information__input"
+                  value=""
+                  placeholder="Enter Street"
+                  readonly
+                ></textarea>
+                <span class="input__title"
+                  >Street<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  name="street"
+                  readonly
+                  type="date"
+                />
+                <span class="input__title"
+                  >Event Start Date/Time<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  name="street"
+                  readonly
+                  type="date"
+                />
+                <span class="input__title"
+                  >Event End Date/Time<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="btn__box__modal">
+            <span class="btn__primary active">Create Event</span>
+          </div>
+        </form>
+      </div>
+
       <header class="header">
         <div class="section__title__container">
           <div class="menu__icon">
@@ -392,7 +584,7 @@
               />
             </svg>
           </div>
-          <h2 class="heading__secondary">Dashboard</h2>
+          <h2 class="heading__secondary">Officials</h2>
         </div>
         <div class="user__box">
           <img
@@ -447,389 +639,90 @@
         </div>
       </header>
       <div class="container">
-        <div class="heading__box">
-          <h1 class="heading__primary">
-            Welcome, <span class="heading__name">John!</span>
-          </h1>
-        </div>
-        <div class="cards margin__bottom__3">
-          <!-- 1 -->
-          <div class="card">
-            <div class="card__title__box">
-              <p class="subheading">Households</p>
-              <!-- Home Outline Icon -->
-              <div class="card__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  width="24"
-                  height="24"
-                  class="card__icon__item"
-                >
-                  <path
-                    d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                  />
-                  <path
-                    d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="count">2942</p>
-          </div>
-          <!-- 2 -->
-          <div class="card">
-            <div class="card__title__box">
-              <p class="subheading">Residents</p>
-              <div class="card__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="card__icon__item"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M402 168c-2.93 40.67-33.1 72-66 72s-63.12-31.32-66-72c-3-42.31 26.37-72 66-72s69 30.46 66 72z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                  />
-                  <path
-                    d="M336 304c-65.17 0-127.84 32.37-143.54 95.41-2.08 8.34 3.15 16.59 11.72 16.59h263.65c8.57 0 13.77-8.25 11.72-16.59C463.85 335.36 401.18 304 336 304z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-miterlimit="10"
-                    stroke-width="32"
-                  />
-                  <path
-                    d="M200 185.94c-2.34 32.48-26.72 58.06-53 58.06s-50.7-25.57-53-58.06C91.61 152.15 115.34 128 147 128s55.39 24.77 53 57.94z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                  />
-                  <path
-                    d="M206 306c-18.05-8.27-37.93-11.45-59-11.45-52 0-102.1 25.85-114.65 76.2-1.65 6.66 2.53 13.25 9.37 13.25H154"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-miterlimit="10"
-                    stroke-width="32"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="count">249</p>
-          </div>
-          <!-- 3 -->
-          <div class="card">
-            <div class="card__title__box">
-              <p class="subheading">Settled Cases</p>
-              <div class="card__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="card__icon__item"
-                  viewBox="0 0 512 512"
-                >
-                  <rect
-                    x="32"
-                    y="128"
-                    width="448"
-                    height="320"
-                    rx="48"
-                    ry="48"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                  />
-                  <path
-                    d="M144 128V96a32 32 0 0132-32h160a32 32 0 0132 32v32M480 240H32M320 240v24a8 8 0 01-8 8H200a8 8 0 01-8-8v-24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="count">2943</p>
-          </div>
-          <!-- 4 -->
-          <div class="card">
-            <div class="card__title__box">
-              <p class="subheading">Unsettled Cases</p>
-              <div class="card__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="card__icon__item"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M112.91 128A191.85 191.85 0 0064 254c-1.18 106.35 85.65 193.8 192 194 106.2.2 192-85.83 192-192 0-104.54-83.55-189.61-187.5-192a4.36 4.36 0 00-4.5 4.37V152"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                  />
-                  <path
-                    d="M233.38 278.63l-79-113a8.13 8.13 0 0111.32-11.32l113 79a32.5 32.5 0 01-37.25 53.26 33.21 33.21 0 01-8.07-7.94z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="count">29</p>
-          </div>
-        </div>
-        <div class="container__bottom">
-          <div id="chart" class="card"></div>
-          <div class="events__container card">
-            <h3 class="heading__tertiary">List of Events</h3>
-            <div class="events">
-              <!-- For each -->
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
+        <div class="card">
+          <div class="heading__container">
+            <p class="subheading">List of Officials</p>
+            <div class="button__box">
+              <button class="btn__secondary">
+                <div class="icon__link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon__link"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="32"
+                      d="M32 144h448M112 256h288M208 368h96"
+                    />
+                  </svg>
                 </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
+                Filter
+              </button>
+              <button class="btn__secondary active btn__add__item">
+                <div class="icon__link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ionicon"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M376 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="32"
+                    />
+                    <path
+                      d="M288 304c-87 0-175.3 48-191.64 138.6-2 10.92 4.21 21.4 15.65 21.4H464c11.44 0 17.62-10.48 15.65-21.4C463.3 352 375 304 288 304z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-miterlimit="10"
+                      stroke-width="32"
+                    />
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="32"
+                      d="M88 176v112M144 232H32"
+                    />
+                  </svg>
                 </div>
-              </div>
-              <!-- For Each -->
-              <!-- Remove later -->
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="event__date">
-                  <p class="day">25</p>
-                  <p class="month">Oct</p>
-                </div>
-                <div class="event__title__box">
-                  <p class="event__title">
-                    Barangay Fiesta 2024: Unity in celebration
-                  </p>
-                </div>
-              </div>
-              <!-- Remove later -->
+                Add Official
+              </button>
             </div>
           </div>
-          <div class="birthdays__container card">
-            <h3 class="heading__tertiary">List of Birthdays</h3>
-            <div class="birthday__container__card">
-              <!-- foreach -->
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <!-- foreach -->
-              <!-- Remove later -->
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <div class="birthday__item">
-                <div class="img__box__birthday">
-                  <img src="circle.png" alt="User image" />
-                  <div class="user__details">
-                    <p class="user__name">John Smith</p>
-                    <p class="position">Admin</p>
-                  </div>
-                </div>
-                <div class="birthday__box">
-                  <p class="birthday__day">28</p>
-                  <p class="birthday__month">Jun</p>
-                </div>
-              </div>
-              <!-- Remove later -->
-            </div>
+          <div class="container">
+            <table id="example" class="display">
+              <thead class="thead">
+                <tr>
+                  <th>#</th>
+                  <th>Event Name</th>
+                  <th>Description</th>
+                  <th>Start Date/Time</th>
+                  <th>End Date/Time</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Excalibur Barangay Fest</td>
+                  <td>Lorem ipsum dolor sit amet consectur</td>
+                  <td>12-31-93/ 11:34</td>
+                  <td>12-31-93/ 11:34</td>
+                  <td>
+                    <button class="btn__primary table__button">View</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -839,92 +732,44 @@
         </p>
       </footer>
     </main>
-    <!-- <script
+    <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script> -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const options = {
-          series: [25, 15, 5, 35, 10, 5, 3, 2],
-          labels: [
-            "Male",
-            "Female",
-            "Minors",
-            "Non Voters",
-            "Non Head of the Family",
-            "Archived",
-            "PWD",
-            "Voters",
-          ],
-          chart: {
-            type: "donut",
-            height: 380,
-          },
-          colors: [
-            "#2196F3",
-            "#9C27B0",
-            "#F44336",
-            "#009688",
-            "#FF9800",
-            "#00BCD4",
-            "#4CAF50",
-            "#FFC107",
-          ],
-          legend: {
-            position: "left",
-            offsetY: 20,
-          },
-          plotOptions: {
-            pie: {
-              donut: {
-                size: "65%",
-                labels: {
-                  show: true,
-                  total: {
-                    show: true,
-                    showAlways: true,
-                    label: "Total",
-                    fontSize: "22px",
-                    fontFamily: "Helvetica, Arial, sans-serif",
-                    fontWeight: 600,
-                    color: "#373d3f",
-                  },
-                },
-              },
-            },
-          },
-          responsive: [
-            {
-              breakpoint: 480,
-              options: {
-                chart: {
-                  height: 300,
-                },
-                legend: {
-                  position: "bottom",
-                },
-              },
-            },
-          ],
-          tooltip: {
-            y: {
-              formatter: function (value) {
-                return value + "%";
-              },
-            },
-          },
-        };
+    ></script>
 
-        const chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-      });
-    </script>
     <script>
+      document.querySelectorAll(".table__button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelector(".wrapper").classList.add("open");
+          document.getElementById("viewEventModal").classList.add("open");
+        });
+      });
+
+      document
+        .querySelector(".btn__add__item")
+        .addEventListener("click", function () {
+          document.querySelector(".wrapper").classList.add("open");
+          document.getElementById("createEventModal").classList.add("open");
+        });
+
+      document.querySelector(".wrapper").addEventListener("click", function () {
+        document.querySelector(".wrapper").classList.remove("open");
+        document.getElementById("createEventModal").classList.remove("open");
+        document.getElementById("viewEventModal").classList.remove("open");
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelector(".wrapper").classList.remove("open");
+          document.getElementById("createEventModal").classList.remove("open");
+          document.getElementById("viewEventModal").classList.remove("open");
+        }
+      });
+
       document
         .querySelector(".menu__icon")
         .addEventListener("click", function () {
@@ -937,6 +782,10 @@
         .addEventListener("click", function () {
           document.querySelector(".dropdown__menu").classList.toggle("show");
         });
+
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
     </script>
   </body>
 </html>
