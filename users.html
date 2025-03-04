@@ -495,35 +495,79 @@
       </div>
       <div id="viewEventModal" class="modal">
         <div class="modal__header">
-          <p class="modal__heading">View Event</p>
+          <p class="modal__heading">Add Official</p>
         </div>
         <form class="modal__body community__modal">
           <div class="row flex__d__col">
             <div class="row">
+              <div class="img__box">
+                <img src="img__default.png" class="img__profile" />
+              </div>
+              <div class="input__box__container">
+                <div class="input__box margin__bottom__2">
+                  <input
+                    class="information__input"
+                    value=""
+                    placeholder="Enter Street"
+                    name="street"
+                    readonly
+                  />
+                  <span class="input__title"
+                    >Firstname<span class="red__dot">*</span></span
+                  >
+                  <p class="text-danger"></p>
+                </div>
+                <div class="input__box">
+                  <input
+                    class="information__input"
+                    value=""
+                    placeholder="Enter Street"
+                    name="street"
+                    readonly
+                  />
+                  <span class="input__title"
+                    >Lastname<span class="red__dot">*</span></span
+                  >
+                  <p class="text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
               <div class="input__box">
                 <input
                   class="information__input"
                   value=""
-                  placeholder="Enter Street"
-                  name="street"
+                  placeholder="Enter middlename"
                   readonly
                 />
                 <span class="input__title"
-                  >Street<span class="red__dot">*</span></span
+                  >Middlename<span class="red__dot">*</span></span
+                >
+                <p class="text-danger"></p>
+              </div>
+              <div class="input__box">
+                <input
+                  class="information__input"
+                  value=""
+                  placeholder="Enter middlename"
+                  readonly
+                />
+                <span class="input__title"
+                  >Suffix<span class="red__dot">*</span></span
                 >
                 <p class="text-danger"></p>
               </div>
             </div>
             <div class="row">
               <div class="input__box">
-                <textarea
+                <input
                   class="information__input"
                   value=""
-                  placeholder="Enter Street"
+                  name="street"
                   readonly
-                ></textarea>
+                />
                 <span class="input__title"
-                  >Street<span class="red__dot">*</span></span
+                  >Position<span class="red__dot">*</span></span
                 >
                 <p class="text-danger"></p>
               </div>
@@ -538,12 +582,10 @@
                   type="date"
                 />
                 <span class="input__title"
-                  >Event Start Date/Time<span class="red__dot">*</span></span
+                  >Position<span class="red__dot">*</span></span
                 >
                 <p class="text-danger"></p>
               </div>
-            </div>
-            <div class="row">
               <div class="input__box">
                 <input
                   class="information__input"
@@ -553,7 +595,7 @@
                   type="date"
                 />
                 <span class="input__title"
-                  >Event End Date/Time<span class="red__dot">*</span></span
+                  >Position<span class="red__dot">*</span></span
                 >
                 <p class="text-danger"></p>
               </div>
@@ -564,6 +606,7 @@
           </div>
         </form>
       </div>
+
       <header class="header">
         <div class="section__title__container">
           <div class="menu__icon">

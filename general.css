@@ -82,6 +82,15 @@ hr {
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.grid {
+  display: grid;
+}
+.grid__2__cols {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+.col__gap__2 {
+  column-gap: 2rem;
+}
 .footer {
   padding: 8rem 0 0 0;
   text-align: center;
